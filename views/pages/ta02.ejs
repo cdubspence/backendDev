@@ -9,11 +9,22 @@
 <div class="jumbotron text-center">
   <div class="container">
     <h1><%= title %></h1>
-    <p>This is the placeholder for Team Activity 02</p>
+    <form method = "POST" action="/ta02/addUser">
+    <label for="username">UserName</label>
+    <input type="text" name="username" style="color: black;">
+    <button type="submit">Add</button>
+    </form>
+    <form method = "POST" action="/ta02/removeUser">
+      <label for="username">UserName</label>
+      <input type="text" name="username" style="color: black;">
+      <button type="submit">Remove</button>
+      </form>
   </div>
 </div>
 <div class="container">
-  
+  <% for (let username of names) { %>
+    <li><%= username %></li>
+    <% } %>
 </div>
 
 
