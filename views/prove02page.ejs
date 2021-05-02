@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+</head>
+
+<body>
+<div class="jumbotron text-center">
+  <div class="container">
+    <h1><%= title %></h1>
+    <form method = "POST" action="/info">
+    <label for="bookTitle">Title: </label>
+    <input type="text" name="bookTitle" style="color: black;">
+    <label for="bookDescription">Description: </label>
+    <input type="text" name="bookDescription" style="color: black;">
+    <button type="submit">Add</button>  
+  </div>
+</div>
+<div class="container" style="color: black;">
+  <% for (let bookTitle of books) { %>
+    <h2><%= bookTitle %></h2>
+    <% for (let bookDescription of descriptions) { %>
+      <p><%= bookDescription %></p>
+      <% } %>
+    <% } %>
+</div>
+</body>
+</html>
